@@ -9,6 +9,10 @@
 # masing supaya kode tetap modular dan gampang dirawat,
 # bukan ditumpuk semua di satu file besar.
 
+import os
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+os.environ["OMP_NUM_THREADS"] = "1"
 import streamlit as st
 import eda
 import prediction
