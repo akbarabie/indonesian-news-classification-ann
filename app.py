@@ -64,12 +64,13 @@ for _ in range(3):
 
 st.sidebar.caption(
     """
-    **<b>✪Model yang digunakan</b>**
+    <b>**✪Model yang digunakan**</b>
 
     Ensemble **Soft Voting** dari empat model ANN Improvement,
     yaitu TextCNN dengan variasi hyperparameter serta
     TextCNN menggunakan pretrained embedding **Word2Vec**.
-    """
+    """,
+    unsafe_allow_html=True
 )
 # Footer
 st.sidebar.markdown("---")
