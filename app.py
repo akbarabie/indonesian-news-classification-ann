@@ -29,33 +29,68 @@ st.set_page_config(
 # ============================================================
 # Sidebar Navigasi
 # ============================================================
-with st.sidebar:
-    st.title("📰 Navigasi")
+top = st.sidebar.container()
+
+with top:
+    st.header("📰 Navigasi")
+
+    # Deskripsi aplikasi
     st.markdown(
-        "Aplikasi berbasis kecerdasan buatan (AI) yang dirancang untuk mengklasifikasikan judul berita Indonesia secara otomatis menggunakan Artificial Neural Network (ANN). Aplikasi ini mengintegrasikan teknik Natural Language Processing (NLP) untuk memproses teks tidak terstruktur dan menghasilkan prediksi kategori berita yang akurat serta relevan."
+        """
+        Aplikasi berbasis kecerdasan buatan (AI) yang dirancang untuk
+        mengklasifikasikan judul berita Indonesia secara otomatis
+        menggunakan **Artificial Neural Network (ANN)**.
+
+        Aplikasi ini mengintegrasikan teknik
+        **Natural Language Processing (NLP)** untuk memproses teks
+        tidak terstruktur dan menghasilkan prediksi kategori berita
+        yang akurat serta relevan.
+        """
     )
 
+    # Menu Navigasi
     menu = st.radio(
         "Pilih Menu",
-        options=["Exploratory Data Analysis", "Prediksi Kategori Berita"],
+        [
+            "Exploratory Data Analysis",
+            "Prediksi Kategori Berita"
+        ],
         index=0
     )
 
-    st.markdown("---")
-    st.caption(
-        "Model final yang dipakai adalah ensemble soft voting dari "
-        "empat model ANN Improvement (TextCNN dengan variasi hyperparameter "
-        "dan TextCNN dengan pretrained embedding Word2Vec)."
-    )
-    st.markdown(
-        """
-        <div style="text-align: center; font-size: 0.9rem; color: gray;">
-            Dibuat oleh <b>Muhammad Akbar Suharbi</b><br>
-            Data & AI Professional
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+# Memberikan ruang kosong agar footer berada lebih bawah
+for _ in range(8):
+    st.sidebar.write("")
+
+# Informasi model
+st.sidebar.markdown("---")
+
+st.sidebar.caption(
+    """
+    **Model yang digunakan**
+
+    Ensemble **Soft Voting** dari empat model ANN Improvement,
+    yaitu TextCNN dengan variasi hyperparameter serta
+    TextCNN menggunakan pretrained embedding **Word2Vec**.
+    """
+)
+
+# Footer
+st.sidebar.markdown(
+    """
+    <div style="
+        text-align:center;
+        color:#9CA3AF;
+        font-size:14px;
+        padding-top:10px;
+        padding-bottom:5px;
+    ">
+        <strong>Muhammad Akbar Suharbi</strong><br>
+        Data & AI Professional
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # ============================================================
 # Routing antar halaman berdasarkan pilihan menu
