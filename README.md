@@ -1,16 +1,21 @@
-# Folder saved_model
+# Deployment - Klasifikasi Kategori Berita Indonesia
 
-Folder ini sengaja dikosongkan di deliverable ini. Sebelum menjalankan aplikasi
-(baik lokal maupun lewat Docker), salin 6 file artefak hasil Model Saving dari
-notebook utama (`P2G7_Muhammad_Akbar_Suharbi.ipynb`, section 12) ke folder ini:
+Folder ini berisi source code webapps Streamlit untuk project Graded Challenge 7.
 
-- model_2_baseline.keras
-- model_2b_numfilters128.keras
-- model_2c_dropout03.keras
-- model_3_word2vec.keras
-- tokenizer.pkl
-- label_encoder.pkl
+## Struktur File
 
-Tanpa keenam file ini, menu Prediksi Kategori Berita tidak akan bisa jalan,
-dan bagian 5.7.3 - 5.7.4 di menu EDA (OOV rate dan wordcloud long tail) juga
-butuh tokenizer.pkl.
+```
+deployment/
+├── app.py                   entry point, navigasi antar menu
+├── eda.py                   menu Exploratory Data Analysis
+├── prediction.py             menu Prediksi Kategori Berita
+├── requirements.txt
+├── detik_news_title.csv      dataset, dipakai oleh menu EDA
+└── saved_model/               taruh 6 file artefak model di sini (lihat PLACEHOLDER.md)
+```
+
+## Sebelum Menjalankan
+
+Pastikan folder `saved_model/` sudah berisi keenam file artefak hasil training
+dari notebook utama0. Tanpa file ini, menu Prediksi dan sebagian menu EDA (5.7.3 - 5.7.4) tidak akan
+bisa jalan.
