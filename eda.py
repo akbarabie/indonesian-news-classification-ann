@@ -547,13 +547,8 @@ def run():
     img = Image.open('image_news.png')
     st.image(img, caption="News Classification")
     st.markdown(
-         """
-        <p style='text-align:center; font-size:20px;'>
-            "Halaman ini menampilkan eksplorasi data pada dataset **detik_news_title.csv** "
-            "yang berisi judul berita detik.com periode Januari - Juni 2020."
-        </p>
-         """,
-        unsafe_allow_html=True
+        "Halaman ini menampilkan eksplorasi data pada dataset **detik_news_title.csv** "
+        "yang berisi judul berita detik.com periode Januari - Juni 2020."
     )
 
     df = load_raw_data()
