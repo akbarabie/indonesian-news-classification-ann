@@ -15,12 +15,9 @@
 
 import re
 import pickle
-
 import streamlit as st
 import pandas as pd
 import numpy as np
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.sequence import pad_sequences
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 
 MODEL_DIR = "saved_model"
@@ -33,6 +30,10 @@ DEFAULT_THRESHOLD = 0.60
 # ============================================================
 @st.cache_resource(show_spinner="Memuat model ensemble dan artifact pendukung...")
 def load_artifacts():
+    # Import TensorFlow di sini, bukan di top-level file, supaya menu EDA tidak ikut menanggung memory footprint TensorFlow kalau user tidak pernah membuka menu Prediksi
+    from tensorflow.keras.models import load_model
+    from tensorflow.keras.preprocessing.sequence import pad_sequences
+
     model_2 = load_model(f"{MODEL_DIR}/model_2_baseline.keras")
     model_2b = load_model(f"{MODEL_DIR}/model_2b_numfilters128.keras")
     model_2c = load_model(f"{MODEL_DIR}/model_2c_dropout03.keras")
@@ -69,6 +70,9 @@ def clean_text(text, stopword_remover):
 
 
 def predict_category_batch(texts, models, tokenizer, label_encoder, max_length, stopword_remover):
+    # Import library pad_sequences
+    from tensorflow.keras.preprocessing.sequence import pad_sequences
+    
     texts_clean = [clean_text(t, stopword_remover) for t in texts]
 
     seq = tokenizer.texts_to_sequences(texts_clean)
