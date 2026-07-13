@@ -59,12 +59,12 @@ with top:
     )
 
 # Memberikan ruang kosong agar footer berada lebih bawah
-for _ in range(5):
+for _ in range(3):
     st.sidebar.write("")
 
 st.sidebar.caption(
     """
-    **Model yang digunakan**
+    **<b>✪Model yang digunakan</b>**
 
     Ensemble **Soft Voting** dari empat model ANN Improvement,
     yaitu TextCNN dengan variasi hyperparameter serta
