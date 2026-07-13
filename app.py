@@ -59,11 +59,8 @@ with top:
     )
 
 # Memberikan ruang kosong agar footer berada lebih bawah
-for _ in range(8):
+for _ in range(5):
     st.sidebar.write("")
-
-# Informasi model
-st.sidebar.markdown("---")
 
 st.sidebar.caption(
     """
@@ -74,8 +71,8 @@ st.sidebar.caption(
     TextCNN menggunakan pretrained embedding **Word2Vec**.
     """
 )
-
 # Footer
+st.sidebar.markdown("---")
 st.sidebar.markdown(
     """
     <div style="
