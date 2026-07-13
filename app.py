@@ -47,7 +47,8 @@ with st.sidebar:
         "empat model ANN Improvement (TextCNN dengan variasi hyperparameter "
         "dan TextCNN dengan pretrained embedding Word2Vec)."
     )
-    st.caption("Dibuat oleh Muhammad Akbar Suharbi - Data & AI Professional")
+    st.caption("Dibuat oleh Muhammad Akbar Suharbi" 
+               "\nData & AI Professional")
 
 # ============================================================
 # Routing antar halaman berdasarkan pilihan menu
