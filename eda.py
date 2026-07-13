@@ -552,7 +552,8 @@ def run():
             "Halaman ini menampilkan eksplorasi data pada dataset **detik_news_title.csv** "
             "yang berisi judul berita detik.com periode Januari - Juni 2020."
         </p>
-         """
+         """,
+        unsafe_allow_html=True
     )
 
     df = load_raw_data()
