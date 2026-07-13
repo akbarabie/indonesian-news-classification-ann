@@ -59,7 +59,7 @@ with top:
     )
 
 # Memberikan ruang kosong agar footer berada lebih bawah
-for _ in range(3):
+for _ in range(2):
     st.sidebar.write("")
 
 st.sidebar.caption(
