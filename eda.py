@@ -535,13 +535,24 @@ def render_after_fe(df):
 # Entry Point Halaman EDA
 # ============================================================
 def run():
-    st.title("Automatic Indonesian News Classification")
+    st.markdown(
+        """
+        <h1 style='text-align: center;'>
+            Automatic Indonesian News Classification
+        </h1>
+        """,
+        unsafe_allow_html=True
+    )
     # Menampilkan cover gambar
     img = Image.open('image_news.png')
     st.image(img, caption="News Classification")
     st.markdown(
-        "Halaman ini menampilkan eksplorasi data pada dataset **detik_news_title.csv** "
-        "yang berisi judul berita detik.com periode Januari - Juni 2020."
+         """
+        <p style='text-align:center; font-size:20px;'>
+            "Halaman ini menampilkan eksplorasi data pada dataset **detik_news_title.csv** "
+            "yang berisi judul berita detik.com periode Januari - Juni 2020."
+        </p>
+         """
     )
 
     df = load_raw_data()

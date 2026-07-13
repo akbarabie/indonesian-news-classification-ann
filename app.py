@@ -32,10 +32,7 @@ st.set_page_config(
 with st.sidebar:
     st.title("📰 Navigasi")
     st.markdown(
-        "An AI-powered application that automatically classifies Indonesian "
-        "news headlines using an **Artificial Neural Network (ANN)**. "
-        "The solution integrates Natural Language Processing (NLP) techniques "
-        "to transform unstructured text into accurate and meaningful news categories."
+        "Aplikasi berbasis kecerdasan buatan (AI) yang dirancang untuk mengklasifikasikan judul berita Indonesia secara otomatis menggunakan Artificial Neural Network (ANN). Aplikasi ini mengintegrasikan teknik Natural Language Processing (NLP) untuk memproses teks tidak terstruktur dan menghasilkan prediksi kategori berita yang akurat serta relevan."
     )
 
     menu = st.radio(
@@ -50,7 +47,7 @@ with st.sidebar:
         "empat model ANN Improvement (TextCNN dengan variasi hyperparameter "
         "dan TextCNN dengan pretrained embedding Word2Vec)."
     )
-    st.caption("Dibuat oleh Muhammad Akbar Suharbi - Hacktiv8 Data Science Fulltime Program")
+    st.caption("Dibuat oleh Muhammad Akbar Suharbi - Data & AI Professional")
 
 # ============================================================
 # Routing antar halaman berdasarkan pilihan menu
