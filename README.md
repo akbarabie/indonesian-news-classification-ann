@@ -2,7 +2,7 @@
 
 An end to end NLP pipeline that classifies Indonesian news headlines from detik.com into five categories (**finance, health, oto, sport, travel**) using a TensorFlow/Keras ensemble, deployed as an interactive Streamlit app so an editorial team can get a category suggestion the moment a headline is typed.
 
-🚀 **Live demo:** https://indonesian-news-classification-ann.streamlit.app/
+🚀 **Live demo:** https://indonesian-news-classification.streamlit.app/
 
 ![App banner](docs/app_banner.png)
 
